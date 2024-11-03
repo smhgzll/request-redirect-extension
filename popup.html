@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Interceptor Rules</title>
+    <style>
+        html {
+            width: 500px;
+        }
+        body {
+            width: calc(90%);
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        .rule {
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: calc(90%);
+            margin: 5px 0;
+            padding: 5px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Request Interceptor</h1>
+<div>
+    <label>
+        <input id="toggle-interceptor" type="checkbox" />
+        Enable Interceptor
+    </label>
+</div>
+<div>
+    <input id="new-pattern" type="text" placeholder="Pattern" />
+    <input id="new-redirect-url" type="text" placeholder="Redirect URL" />
+    <textarea id="new-headers" placeholder="Headers (JSON format)"></textarea>
+    <button id="add-rule">Add Rule</button>
+</div>
+<h2>Existing Rules</h2>
+<div id="rules-container"></div>
+<button id="save-rules">Save Rules</button>
+
+<script src="popup.js"></script>
+</body>
+</html>
